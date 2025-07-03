@@ -1,7 +1,5 @@
 #!/user/bin/env python
 """Imprime a mensagem de um e-mail
-
-NAO MANDE SPAM!!!
 """
 __version__ = "0.1.1"
 
