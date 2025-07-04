@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 
 arguments = sys.argv[1:]
 if not arguments:
-    print("informa o nome do arquivo de emails")
+    print("Informe o nome do arquivo de emails")
     sys.exit(1)
 
 filename = arguments[0]
