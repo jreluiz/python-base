@@ -22,8 +22,8 @@ atividades = [
 
 # Listar alunos em cada atividade por sala
 
-for index, atv in atividades:
-    print("{:^25}".format(f"Alunos na atividade {index}:"))
+for nome_atividade, atv in atividades:
+    print("{:^40}".format(f"Alunos na atividade {nome_atividade}:"))
     print("-" * 40)
 
     atv_sala1 = []
