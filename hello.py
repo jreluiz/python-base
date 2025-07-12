@@ -22,6 +22,9 @@ __author__ = "Jorge Luiz"
 __license__ = "Unlicense"
 
 import os
+import sys
+
+print(f"{sys.argv=}")
 
 # sempre no padrão snack case
 current_language = os.getenv("LANG", "en_US")[:5]   # usando fatiamento em python
