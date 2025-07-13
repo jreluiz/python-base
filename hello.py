@@ -33,6 +33,7 @@ arguments = {
 }
 
 for arg in sys.argv[1:]:
+    # TODO: tratar ValueError
     key, value = arg.split("=")
     key = key.lstrip("-").strip()
     value = value.strip()
@@ -44,7 +45,12 @@ for arg in sys.argv[1:]:
 
 current_language = arguments["lang"]
 if current_language is None:
-    current_language = os.getenv("LANG", "en_US")[:5]
+    current_language = os.getenv("LANG")
+    # TODO: usar repetição
+    if current_language is None:
+        current_language = input("Digite a linguagem: ")
+
+current_language = current_language[:5]
 
 msg = {
     "en_US": "Hello, World!",
