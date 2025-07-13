@@ -24,10 +24,27 @@ __license__ = "Unlicense"
 import os
 import sys
 
-print(f"{sys.argv=}")
+# print(f"{sys.argv=}")
 
 # sempre no padrão snack case
-current_language = os.getenv("LANG", "en_US")[:5]   # usando fatiamento em python
+arguments = {
+    "lang": None,
+    "count": 1,
+}
+
+for arg in sys.argv[1:]:
+    key, value = arg.split("=")
+    key = key.lstrip("-").strip()
+    value = value.strip()
+    if key not in arguments:
+        print("Opção inválida `{key}`")
+        sys.exit()
+    # print(key, value)
+    arguments[key] = value
+
+current_language = arguments["lang"]
+if current_language is None:
+    current_language = os.getenv("LANG", "en_US")[:5]
 
 msg = {
     "en_US": "Hello, World!",
@@ -37,7 +54,7 @@ msg = {
     "fr_FR": "Bonjour, Monde!",
 }
 
-print(msg[current_language])
+print(msg[current_language] * int(arguments["count"]))
 
 # msg = "Hello, World!"
 # 
