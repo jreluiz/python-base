@@ -1,1 +1,37 @@
-.venv
+# Arquivos de sistema do macOS
+.DS_Store
+.localized
+.Spotlight-V100
+.Trashes
+__MACOSX
+
+# Arquivos de cache e de compilação do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.Python
+build/
+dist/
+eggs/
+*.egg-info/
+
+# Ambiente Virtual do Python (seja venv ou virtualenv)
+venv/
+.venv/
+env/
+
+# IDEs e Editores de Código
+.idea/                     # PyCharm
+.vscode/                   # VS Code
+*.sublime-project
+*.sublime-workspace
+
+# Logs e Dados de Teste
+*.log
+*.sqlite3                  # Bancos de dados de teste (ex: Django)
+
+# Arquivos sensíveis
+.env                       # Variáveis de ambiente
+

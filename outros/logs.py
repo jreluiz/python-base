@@ -3,6 +3,7 @@
 import os
 import logging
 from logging import handlers
+import antigravity
 
 # TODO: usar função
 # TODO: usar a lib loguru
